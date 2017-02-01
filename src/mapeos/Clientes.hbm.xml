@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="POJOS.C_Cliente" table="clientes">
+        <id name="dni" column="dni"/>
+        <property name="nombre" column="nombre"/>
+        <property name="salario" column="salario"/>
+        <property name="direccion" column="direccion"/>
+        <one-to-one name="telefono" class="POJOS.C_Telefono" cascade="save-update"  />
+    </class>
+</hibernate-mapping>
